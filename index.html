@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Una herramienta para la encriptación y desencriptación de texto">
+    <meta name="keywords" content="encriptación, desencriptación, herramienta de texto">
+    <meta name="author" content="Luis Eduardo Arocha">
+   
+    <!-- Enlaza el archivo de estilos personalizados -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/secure.gif">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/secure.png">
+    <title>Encriptador de texto</title>
+    <link rel="shortcut icon" href="./assets/Logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <div class="header_img">
+                <a class="header_img" href="https://www.aluracursos.com" target="_blank"></a><img src="./assets/logo.svg" alt="Logo de Alura">
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        
+        <section class="main__content">
+            <textarea id="txtcontent" class="main__content__text" type="text"
+                placeholder="Ingresa el texto aquí"></textarea>
+            <span id="spanMessage" class="main__content__span"><img src="assets/exclamation.png" alt=""> Sólo se aceptan minúsculas sin acento</span>
+            <section class="main__content__buttons">
+                <button id="bttnCypher">Encriptar</button>
+                <button id="bttnDecypher">desencriptar</button>
+                <button id="bttnResetPage">Borrar</button>
+            </section>
+        </section>
+        <!--  Resultado                      -->
+        <section class="main__result">
+            <div class="main__result__defaultResult" id="defaultResult">
+                <img class="main__result__sectionImg__imgMan" src="assets/man.svg" alt="">
+                <img class="main__result__sectionImg__imgCircles" src="assets/circles.svg" alt="">
+                <img class="main__result__sectionImg__imgDiamond" src="assets/diamond.svg" alt="">
+                <h1 class="main__result__messagetitle">Ningún mensaje fue encontrado</h1>
+                <p class="main__result__messagetext">Ingresa el texto que desees encriptar o desencriptar
+                </p>
+            </div>
+            <p id="showResult" readonly class="main__result__text" style="display: none;"></p>
+            <button id="bttncopy" class="main__result__button">Copiar</button>
+            <button id="bttnpaste" class="main__result__button" style="display: none;">Pegar</button>
+        </section>
+    </main>
+    <footer id="footer" class="footer">
+        <p id="footer-copy"></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
